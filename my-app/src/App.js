@@ -14,6 +14,11 @@ import Signup from "./collection/input/signup";
 import Update from "./collection/input/update";
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import { useState } from "react";
+//import Hospital from "./hospital";
+import Admin from "./collection/input/admin";
+import Filling from "./collection/input/filling";
+import Prblm from "./collection/input/prblm";
+
 function App(){
     return(
      <div className="App"> 
@@ -33,6 +38,10 @@ function App(){
            <Route path="/signup" element={<Signup/>}></Route>
            <Route path='/update' element={<Update/>}></Route>
            <Route path='/home' element={<Home/>}></Route>
+           {/* <Route path='/hospital' element={<Hospital />}></Route> */}
+           <Route path='/filling' element={<Filling/>}></Route>
+           <Route path='/prblm' element={<Prblm/>}></Route>
+           <Route path='/admin' element={<Admin/>}></Route>
           </Routes>
         </Router>
         </div>

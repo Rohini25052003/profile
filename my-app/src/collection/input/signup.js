@@ -17,16 +17,20 @@ function Signup() {
         try
         {
             
-            const result=await axios.post("http://localhost:8000/input/"+email+"/"+password+"/"+cpassword);
+            const result=await axios.post("http://localhost:8000/input/"+email+"/"+password)
+            {
+                
                 if(result.data)
                 {
                     alert("saved successfully");
-                    // nav("/login");
+                    nav('/login');
+                    
                 }
                 else
                 {
                     alert("try again");
                 }
+            }
         }
         catch(e)
         {
@@ -41,17 +45,16 @@ function Signup() {
 
 
     return (
+    <>
         <div className="container">
 
             <h1>Signup</h1>
-
-            <form  action="/login">
-                <input type="email" onChange={(e) => { setEmail(e.target.value) }} placeholder="Email"  /><br/>
-                <input type="password" onChange={(e) => { setPassword(e.target.value) }} placeholder="Password" /><br/>
-                <input type="text" onChange={(e) => { setcpassword(e.target.value) }} placeholder="cpassword" /><br/>
-                <button onClick={Submit}>Submit</button>
-            </form>
+            <input type="email" onChange={(e) => { setEmail(e.target.value) }} placeholder="Email"  /><br/>
+            <input type="password" onChange={(e) => { setPassword(e.target.value) }} placeholder="Password" /><br/>
+            <input type="password" onChange={(e) => { setcpassword(e.target.value) }} placeholder="cpassword" /><br/>
+            <button onClick={Submit}>Submit</button>
         </div>
+        </>
     )
 }
 

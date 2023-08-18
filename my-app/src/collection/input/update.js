@@ -1,50 +1,40 @@
 import React, { useEffect,useState } from "react";
 import axios from "axios";
-//import { useNavigate } from "react-router-dom";
-function Update()
-{
-    const [password,setPassword]=useState('');
-    const [upassword,setUpassword]=useState('');  
-    
+import {useNavigate} from "react-router-dom";
+import Home from "./home";
+export const Update=()=>{
+    const nav=useNavigate();
+    const [email,setEmail]=useState([]);
+    const [newpasw,snewpasw]=useState([])
     const Submit=async()=>
     {
-        try
-        {
-           
-            const res=await axios.post("http://localhost:8000/update/"+password+"/"+upassword);
-            if(res.data)
-            {
-                alert("updated")
-            }
-            else{
-                alert("not updated")
-            }
-        }
-        catch(e)
-        {
-            console.log(e)
-        }
         
-
+            
+            const res= await axios.post("http://localhost:8000/update/"+email+"/"+newpasw)
+            {
+                if(res.data)
+                {
+                     alert("saved");
+                     nav('/home');
+                }
+                else
+                {
+                     alert("try again");
+                } 
+            }
+       
     }
-    return (
-        <div className="login">
-
-            <h1>update</h1>
-
-            <form >
-              
-                <input type="password" onChange={(e) => { setPassword(e.target.value) }} placeholder="Password" /><br/>
-                <input type="text" onChange={(e) => { setUpassword(e.target.value) }} placeholder="Upassword" /><br/>
-                <input type="submit" onClick={Submit} />
-
-            </form>
-
+    return(
+        <>
+        <div className="container">
+            <h1>Update</h1>
+           
+                <input type="email" onChange={(e) => { setEmail(e.target.value) }} placeholder="Email"  /><br/>
+                <input type="password" onChange={(e) => { snewpasw(e.target.value) }} placeholder="New Password" /><br/>
+                <button onClick={Submit}>update</button>
+           
         </div>
-    )
+        </>
+        );
 }
-
 export default Update;
-
-   
-    
