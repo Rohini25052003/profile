@@ -6,17 +6,20 @@
 h1{
     text-align: center;
 }
+
 button {
     background-color: #a776e4;
     color: white;
-    padding: 15px 20px;
-    margin: 8px 0;
+    padding: 8px 10px;
+    margin: 10px 0;
     border: chocolate;
     cursor: pointer;
-    width: 100%;
+    width: 50%;
+    border-radius: 30px;
     
     
   }
+
   button:hover {
     opacity: 0.8;
   }
@@ -28,6 +31,11 @@ button {
     border: 1px solid #ccc;
     box-sizing: border-box;
   }
+  
+    
+  
+    
+  
    body{
     
     background-image:url('C:\Users\rohin\OneDrive\Desktop\profile\my-app\public\love.jpg');
@@ -36,7 +44,7 @@ button {
     height:auto;
     background-repeat:no-repeat;
   
-
+   }
+  
    
-  } 
   

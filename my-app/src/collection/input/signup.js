@@ -17,7 +17,7 @@ function Signup() {
         try
         {
             
-            const result=await axios.post("http://localhost:8000/input/"+email+"/"+password)
+            const result=await axios.post("https://profile-bsrl.onrender.com/input/"+email+"/"+password)
             {
                 
                 if(result.data)

@@ -22,7 +22,7 @@ function Login(){
    
     const Submit=async()=>{
         try{
-            const res=await axios.get("http://localhost:8000/output/"+email+"/"+password);
+            const res=await axios.get("https://profile-bsrl.onrender.com/output/"+email+"/"+password);
             if(res.data)
             
             

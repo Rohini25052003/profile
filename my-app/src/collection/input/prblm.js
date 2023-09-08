@@ -3,8 +3,8 @@ import axios from 'axios';
 import {useState} from 'react';
 import { useNavigate } from "react-router-dom";
 import { useEffect } from 'react';
-import Filling from './filling';
-import '../css/prblm.css';
+//import Filling from './filling';
+import '../css/login.css';
 const Prblm=()=>{
     const [users,setUsers]=useState([])
     
@@ -28,7 +28,7 @@ const Prblm=()=>{
     
     
     useEffect(()=>{
-        axios.get("http://localhost:8000/filling/")
+        axios.get("https://profile-bsrl.onrender.com/filling/")
         .then((result)=>
         {
             setUsers(result.data);
@@ -39,7 +39,7 @@ const Prblm=()=>{
     return (
         
             <>
-           <div className="roni">
+           <div className="b">
                  {
                 users.map((data)=>
                 (

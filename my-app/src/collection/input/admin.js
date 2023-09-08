@@ -12,7 +12,7 @@ function Admin(){
     const [password,setPassword]=useState([]);
     const Submit=async()=>{
         try{
-            const res=await axios.get("http://localhost:8000/admin/"+email+"/"+password);
+            const res=await axios.get("https://profile-bsrl.onrender.com/admin/"+email+"/"+password);
             if(res.data){
                 alert("admin logined successfully");
                 history('/filling');

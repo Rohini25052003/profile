@@ -10,7 +10,7 @@ export const Update=()=>{
     {
         
             
-            const res= await axios.post("http://localhost:8000/update/"+email+"/"+newpasw)
+            const res= await axios.post("https://profile-bsrl.onrender.com/update/"+email+"/"+newpasw)
             {
                 if(res.data)
                 {

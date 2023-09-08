@@ -9,7 +9,7 @@ h1{
 button {
     background-color: #04AA6D;
     color: white;
-    padding: 10px 10px;
+    padding: 8px 10px;
     margin: 4px 0;
     border: none;
     cursor: pointer;
@@ -17,6 +17,9 @@ button {
   }
   button:hover {
     opacity: 0.8;
+    box-shadow: 0 0 5px  rgb(230, 178, 133),
+    0 0 25px rgb(230, 178, 133),0 0 50px  rgb(230, 178, 133),
+    0 0 100px rgb(230, 178, 133), 0 0 200px rgb(230, 178, 133);
   }
   input{
     width: 100%;
@@ -34,4 +37,9 @@ button {
     background-repeat:no-repeat;
 
 } */
+.b {
+  border: 1px solid lightsalmon;
+  background-color: lavenderblush;
+  padding: 10px;
+}
   

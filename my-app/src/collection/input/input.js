@@ -10,7 +10,7 @@ export const Input=()=>
     const [data,setdata]=useState([]);
     const [password, setpass] = useState([]);
     const Show=async()=>{
-        const res = await axios.get("http://localhost:8000/output/"+name)
+        const res = await axios.get("https://profile-bsrl.onrender.com/output/"+name)
         {
             if(res.data)
             {
@@ -26,7 +26,7 @@ export const Input=()=>
     {
         try
         {
-            const res=await axios.post("http://localhost:8000/input/"+name+"/"+gmail+"/"+password)
+            const res=await axios.post("https://profile-bsrl.onrender.com/input/"+name+"/"+gmail+"/"+password)
             {
                 if(res.data)
                 {

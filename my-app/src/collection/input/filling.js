@@ -14,7 +14,7 @@ export const Filling=()=>{
     {
         try
         {
-            const res=await axios.post("http://localhost:8000/input/"+users);
+            const res=await axios.post("https://profile-bsrl.onrender.com/input/"+users);
             {
                 if(res.data)
                 {
